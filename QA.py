@@ -17,6 +17,36 @@ model = AutoModelForQuestionAnswering.from_pretrained(model_name)
 # Set the query (question).
 question = "Who is known as the father of computer?"
 
+
+# import boto3
+# import pdfplumber
+# import io
+
+# # AWS credentials
+# aws_access_key_id = "your_aws_access_key_id"
+# aws_secret_access_key = "your_aws_secret_access_key"
+
+# # S3 bucket and object key
+# bucket_name = "your_bucket_name"
+# object_key = "your_object_key"
+
+# # Initialize S3 client
+# s3 = boto3.client("s3", aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+
+# # Get the PDF object from S3
+# pdf_object = s3.get_object(Bucket=bucket_name, Key=object_key)
+
+# # Read the PDF content into a BytesIO object
+# pdf_content = io.BytesIO(pdf_object["Body"].read())
+
+# # Extract text from the PDF
+# document = ""
+# with pdfplumber.open(pdf_content) as pdf:
+#     for page in pdf.pages:
+#         document += page.extract_text()
+
+# # Now, you can use the `document` variable in the previous code snippet
+
 # Fetch a large document from a URL, parse it using BeautifulSoup, and extract the text content.
 url = "https://en.wikipedia.org/wiki/History_of_computing_hardware"
 response = requests.get(url)
