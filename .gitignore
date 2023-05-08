@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyo.d
+*.egg-info/
+dist/
+*.egg
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Output files
+*.txt
+*.log
+*.csv
+*.tsv
+*.json
+
+# Virtual environments
+venv/
+env/
+
